@@ -60,11 +60,6 @@ Fine-tune from checkpoint
 ```sh
 python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
 ```
-Test and visualize your own images
-Please copy your images to sample_input/
-```sh
-python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
-```
 
 ### Evaluation
 
@@ -75,7 +70,7 @@ python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/at
 
 2. Test and visualize your own images
 
-Please copy your images to sample_input/
+Please copy your images to ```sample_input/```
 ```sh
 python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
 ```
