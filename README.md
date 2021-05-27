@@ -18,7 +18,7 @@
 |:--:|
 | *Comparision of traditional approach and our proposal.*|
 
-Details of the dataset construction, model architecture, and experimental results can be found in [our following paper]():
+Details of the dataset construction, model architecture, and experimental results can be found in [our following paper](https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf):
 
 ```
 @inproceedings{m_Nguyen-etal-CVPR21,
