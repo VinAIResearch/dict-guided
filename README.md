@@ -40,7 +40,7 @@ We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zX
 > 
 > * to use these datasets for research or educational purposes only
 > * to not distribute or part of these datasets in any original or modified form.
-> * and to [cite our paper](#cpm-color-pattern-makeup-transfer) whenever these datasets are employed to help produce published results.
+> * and to [cite our paper](#dictionary-guided-scene-text-recognition) whenever these datasets are employed to help produce published results.
 
 ---
 
