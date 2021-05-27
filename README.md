@@ -35,7 +35,7 @@ Details of the dataset construction, model architecture, and experimental result
 ### Datasets
 
 We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset.
-*Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/CPM/blob/main/about-data.md).*
+*Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/dict-guided/blob/main/about-data.md).*
 > ***By downloading these datasets, USER agrees:***
 > 
 > * to use these datasets for research or educational purposes only
