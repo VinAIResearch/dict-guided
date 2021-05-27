@@ -76,22 +76,6 @@ python setup.py install
 - Download Vietnamese’s pre-trained models: [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
-### Training
-
-Fine-tune from checkpoint
-```sh
-python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
-```
-
-### Evaluation
-
-1. Evaluation
-```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
-```
-
-2. Test and visualize your own images
-
 Prepare folders
 ```sh
 mkdir sample_input
@@ -103,3 +87,18 @@ python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --inp
 ```
 
 Result image will be saved in `sample_output/`
+
+### Training and Evaluation
+
+#### Training
+
+Fine-tune from checkpoint
+```sh
+python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
+```
+
+#### Evaluation
+
+```sh
+python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
+```
