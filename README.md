@@ -80,6 +80,9 @@ python setup.py install
 - Download Vietnamese’s pre-trained: [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
+| ![qualitative results.png](https://user-images.githubusercontent.com/32253603/120606555-836d5700-c479-11eb-9a37-09fa8cc129f3.png) |
+|:--:|
+| *Qualitative Results on VinText*|
 Prepare folders
 ```sh
 mkdir sample_input
