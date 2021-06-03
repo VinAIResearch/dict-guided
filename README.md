@@ -91,6 +91,7 @@ Result image will be saved in `sample_output/`
 ### Training and Evaluation
 
 ```MODEL.WEIGHTS``` is a command line parameter that points to your checkpoint path
+
 ```checkpoint_name.pth``` is the name of the checkpoint that you want to use.
 
 #### Training
