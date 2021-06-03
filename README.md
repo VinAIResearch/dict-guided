@@ -42,7 +42,7 @@ We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zX
 > * to not distribute or part of this dataset in any original or modified form.
 > * and to [cite our paper](#dictionary-guided-scene-text-recognition) whenever this dataset are employed to help produce published results.
 
-|    Name  						  | #imgs | #text instances						   | - 									|
+|    Name  						  | #imgs | #text instances						   | Examples 									|
 |:-------------------------------:|:-----:|:-----------------------------------|:----------------------------------:|
 |[VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing)| 2000  | About 56000 			   |![example.png](https://user-images.githubusercontent.com/32253603/120605880-c67afa80-c478-11eb-8a2a-039a1d316503.png)|
 
