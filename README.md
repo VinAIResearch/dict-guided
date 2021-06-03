@@ -82,7 +82,9 @@ python setup.py install
 ##### Usage
 | ![qualitative results.png](https://user-images.githubusercontent.com/32253603/120606555-836d5700-c479-11eb-9a37-09fa8cc129f3.png) |
 |:--:|
-| *Qualitative Results on VinText*|
+| *Qualitative Results on VinText.*|
+
+
 Prepare folders
 ```sh
 mkdir sample_input
