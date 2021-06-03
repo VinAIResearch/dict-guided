@@ -1,7 +1,7 @@
 ##### Table of Content
 
 1. [Introduction](#dictionary-guided-scene-text-recognition)
-1. [Datasets](#datasets)
+1. [Dataset](#dataset)
 1. [Getting Started](#getting-started)
 	- [Requirements](#requirements)
 	- [Usage Example](#usage)
@@ -33,10 +33,10 @@ Details of the dataset construction, model architecture, and experimental result
 
 ---
 
-### Datasets
+### Dataset
 
 We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset. Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/dict-guided/blob/main/about-data.md).
-> ***By downloading this datasets, USER agrees:***
+> ***By downloading this dataset, USER agrees:***
 > 
 > * to use this dataset for research or educational purposes only
 > * to not distribute or part of this dataset in any original or modified form.
