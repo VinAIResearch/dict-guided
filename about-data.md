@@ -24,5 +24,5 @@ datasets
 		|train_images
 		|test_images
 └───evaluation
-	└───|gt_vietnamese.zip
+	└───gt_vietnamese.zip
 ```
