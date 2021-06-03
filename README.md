@@ -1,17 +1,17 @@
 ##### Table of Content
 
-1. [Introduction](#cpm-color-pattern-makeup-transfer)
+1. [Introduction](#dictionary-guided-scene-text-recognition)
 1. [Datasets](#datasets)
 1. [Getting Started](#getting-started)
 	- [Requirements](#requirements)
 	- [Usage Example](#usage)
 1. [Training & Evaluation](#training-and-evaluation)
+1. [Acknowledgement](#acknowledgement)
 
 # Dictionary-guided Scene Text Recognition
 
-- Dictionary-guided is a novel approach that could be used to improve many state-of-the-art models.
-- This repository is built based-on [ABCNet](https://github.com/aim-uofa/AdelaiDet/blob/master/configs/BAText).
-- We also introduce a new Vietnamese scene text dataset (VinText) as a new benchmark for scene text spotting community in the future.
+- We propose a novel dictionary-guided sense text recognition approach that could be used to improve many state-of-the-art models.
+- We also introduce a new benchmark dataset (namely, VinText) for Vietnamese scene text recognition.
 
 
 | ![architecture.png](https://user-images.githubusercontent.com/32253603/117981172-ebd78580-b35e-11eb-84fe-b97c8d15d8bf.png) |
@@ -28,19 +28,19 @@ Details of the dataset construction, model architecture, and experimental result
       booktitle = {Proceedings of the {IEEE} Conference on Computer Vision and Pattern Recognition (CVPR)},
     }
 ```
-**Please CITE** our paper whenever our datasets or model implementation is used to help produce published results or incorporated into other software.
+================
+**Please CITE** our paper whenever our dataset or model implementation is used to help produce published results or incorporated into other software.
 
 ---
 
 ### Datasets
 
-We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset.
-*Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/dict-guided/blob/main/about-data.md).*
-> ***By downloading these datasets, USER agrees:***
+We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset. Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/dict-guided/blob/main/about-data.md).
+> ***By downloading this datasets, USER agrees:***
 > 
-> * to use these datasets for research or educational purposes only
-> * to not distribute or part of these datasets in any original or modified form.
-> * and to [cite our paper](#dictionary-guided-scene-text-recognition) whenever these datasets are employed to help produce published results.
+> * to use this dataset for research or educational purposes only
+> * to not distribute or part of this dataset in any original or modified form.
+> * and to [cite our paper](#dictionary-guided-scene-text-recognition) whenever this dataset are employed to help produce published results.
 
 ---
 
@@ -73,7 +73,7 @@ python setup.py install
 
 ##### Download pre-trained models
 
-- Download Vietnamese’s pre-trained models: [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
+- Download Vietnamese’s pre-trained: [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
 Prepare folders
@@ -90,15 +90,30 @@ Result image will be saved in `sample_output/`
 
 ### Training and Evaluation
 
+```MODEL.WEIGHTS``` is a command line parameter that points to your checkpoint path
+```checkpoint_name.pth``` is the name of the checkpoint that you want to use.
+
 #### Training
 
-Fine-tune from checkpoint
+We produce our results in VinText dataset by using checkpoint was provided in ABCNet repository as the pretrained. It was trained from Total Text dataset. Download the checkpoint: [tt_attn_R_50](https://cloudstor.aarnet.edu.au/plus/s/tYsnegjTs13MwwK/download)
+
 ```sh
-python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
+python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
+```
+
+Example:
+```sh
+python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS ./tt_attn_R_50.pth
 ```
 
 #### Evaluation
 
 ```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS your_checkpoint.pth
+python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
 ```
+Example:
+```sh
+python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
+```
+### Acknowledgement
+This repository is built based-on [ABCNet](https://github.com/aim-uofa/AdelaiDet/blob/master/configs/BAText)
