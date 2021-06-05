@@ -28,15 +28,13 @@ Details of the dataset construction, model architecture, and experimental result
       booktitle = {Proceedings of the {IEEE} Conference on Computer Vision and Pattern Recognition (CVPR)},
     }
 ```
-================
-
 **Please CITE** our paper whenever our dataset or model implementation is used to help produce published results or incorporated into other software.
 
 ---
 
 ### Dataset
 
-We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset. Dataset Folder Structure can be found [here](https://github.com/VinAIResearch/dict-guided/blob/main/about-data.md).
+We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset. 
 > ***By downloading this dataset, USER agrees:***
 > 
 > * to use this dataset for research or educational purposes only
@@ -47,6 +45,24 @@ We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zX
 |:-------------------------------:|:-----:|:-----------------------------------|:----------------------------------:|
 |[VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing)| 2000  | About 56000 			   |![example.png](https://user-images.githubusercontent.com/32253603/120605880-c67afa80-c478-11eb-8a2a-039a1d316503.png)|
 
+Detail about ✨ VinText dataset can be found in [our paper](https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf).
+Download this converted format dataset to fit with the model
+- [Converted dataset](#Converted-dataset) - Converted format dataset to fit with model directly [Download here](https://drive.google.com/file/d/1AXl2iOTvLtMG8Lg2iU6qVta8VuWSXyns/view?usp=sharing)
+
+
+### VinText
+Extract data and copy folder to folder ```datasets/```
+
+```
+datasets
+└───vietnamese
+	└───test.json
+		│train.json
+		|train_images
+		|test_images
+└───evaluation
+	└───|gt_vietnamese.zip
+```
 ---
 
 ### Getting Started
