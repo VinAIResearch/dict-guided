@@ -16,7 +16,7 @@
 
 | ![architecture.png](https://user-images.githubusercontent.com/32253603/117981172-ebd78580-b35e-11eb-84fe-b97c8d15d8bf.png) |
 |:--:|
-| *Comparision of traditional approach and our proposal.*|
+| *Comparison between the traditional approach and our proposed approach.*|
 
 Details of the dataset construction, model architecture, and experimental results can be found in [our following paper](https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf):
 
