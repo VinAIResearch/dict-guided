@@ -92,9 +92,9 @@ cd dict-guided
 python setup.py install
 ```
 
-##### Download pre-trained models
+##### Download pre-trained model
 
-- Download Vietnamese’s pre-trained: [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
+- [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
 | ![qualitative results.png](https://user-images.githubusercontent.com/32253603/120606555-836d5700-c479-11eb-9a37-09fa8cc129f3.png) |
@@ -107,12 +107,11 @@ Prepare folders
 mkdir sample_input
 mkdir sample_output
 ```
-Please copy your images to ```sample_input/```
+Copy your images to ```sample_input/```. Output images would result in ```sample_output/```
 ```sh
 python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
 ```
 
-Result image will be saved in `sample_output/`
 
 ### Training and Evaluation
 
