@@ -109,7 +109,7 @@ mkdir sample_output
 ```
 Copy your images to ```sample_input/```. Output images would result in ```sample_output/```
 ```sh
-python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
+python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS path-to.pth
 ```
 
 
@@ -121,7 +121,7 @@ python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input 
 
 #### Training
 
-We produce our results in VinText dataset by using checkpoint was provided in ABCNet repository as the pretrained. It was trained from Total Text dataset. Download the checkpoint: [tt_attn_R_50](https://cloudstor.aarnet.edu.au/plus/s/tYsnegjTs13MwwK/download)
+For training, we employed the pre-trained model [tt_attn_R_50](https://cloudstor.aarnet.edu.au/plus/s/tYsnegjTs13MwwK/download) from the ABCNet repository for initialization.
 
 ```sh
 python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
