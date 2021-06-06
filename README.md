@@ -55,13 +55,13 @@ Extract data and copy folder to folder ```datasets/```
 
 ```
 datasets
-└───vietnamese
+└───vintext
 	└───test.json
 		│train.json
 		|train_images
 		|test_images
 └───evaluation
-	└───gt_vietnamese.zip
+	└───gt_vintext.zip
 ```
 ---
 
@@ -94,7 +94,7 @@ python setup.py install
 
 ##### Download pre-trained model
 
-- [vietnamese_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
+- [vintext_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
 | ![qualitative results.png](https://user-images.githubusercontent.com/32253603/120606555-836d5700-c479-11eb-9a37-09fa8cc129f3.png) |
@@ -109,7 +109,7 @@ mkdir sample_output
 ```
 Copy your images to ```sample_input/```. Output images would result in ```sample_output/```
 ```sh
-python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
+python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS your_checkpoint.pth
 ```
 
 
@@ -124,22 +124,22 @@ python demo/demo.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml --inp
 We produce our results in VinText dataset by using checkpoint was provided in ABCNet repository as the pretrained. It was trained from Total Text dataset. Download the checkpoint: [tt_attn_R_50](https://cloudstor.aarnet.edu.au/plus/s/tYsnegjTs13MwwK/download)
 
 ```sh
-python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
+python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
 ```
 
 Example:
 ```sh
-python tools/train_net.py --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS ./tt_attn_R_50.pth
+python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./tt_attn_R_50.pth
 ```
 
 #### Evaluation
 
 ```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
+python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
 ```
 Example:
 ```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/Vietnamese/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
+python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
 ```
 ### Acknowledgement
 This repository is built based-on [ABCNet](https://github.com/aim-uofa/AdelaiDet/blob/master/configs/BAText)

@@ -1,4 +1,4 @@
 _BASE_: "../Base-BAText.yaml"
 DATASETS:
-  TRAIN: ("syntext1_train",) 
+  TRAIN: ("vintext_train",)
   TEST: ("vintext_val",)

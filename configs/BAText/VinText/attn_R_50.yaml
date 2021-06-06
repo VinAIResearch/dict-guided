@@ -12,4 +12,4 @@ SOLVER:
   CHECKPOINT_PERIOD: 500
 TEST:
   EVAL_PERIOD: 500
-OUTPUT_DIR: "output/batext/vietnamese/attn_R_50"
+OUTPUT_DIR: "output/batext/vintext/attn_R_50"
