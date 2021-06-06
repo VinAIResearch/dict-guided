@@ -115,16 +115,13 @@ python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input 
 
 ### Training and Evaluation
 
-```MODEL.WEIGHTS``` is a command line parameter that points to your checkpoint path
-
-```checkpoint_name.pth``` is the name of the checkpoint that you want to use.
 
 #### Training
 
 For training, we employed the pre-trained model [tt_attn_R_50](https://cloudstor.aarnet.edu.au/plus/s/tYsnegjTs13MwwK/download) from the ABCNet repository for initialization.
 
 ```sh
-python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
+python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_tt_attn_R_50_checkpoint
 ```
 
 Example:
@@ -135,7 +132,7 @@ python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MO
 #### Evaluation
 
 ```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_checkpoint/checkpoint_name.pth
+python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS path_to_trained_model_checkpoint
 ```
 Example:
 ```sh
