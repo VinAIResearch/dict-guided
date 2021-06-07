@@ -94,9 +94,9 @@ cd dict-guided
 python setup.py install
 ```
 
-##### Download pre-trained model
+##### Download vintext pre-trained model
 
-- [vintext_trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
+- [trained_model](https://drive.google.com/file/d/15rJsQCO1ewJe-EInN-V5dSCftew4vLRz/view?usp=sharing).
 
 ##### Usage
 
@@ -107,7 +107,7 @@ mkdir sample_output
 ```
 Copy your images to ```sample_input/```. Output images would result in ```sample_output/```
 ```sh
-python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS path-to.pth
+python demo/demo.py --config-file configs/BAText/VinText/attn_R_50.yaml --input sample_input/ --output sample_output/ --opts MODEL.WEIGHTS path-to-trained_model-checkpoint
 ```
 | ![qualitative results.png](https://user-images.githubusercontent.com/32253603/120606555-836d5700-c479-11eb-9a37-09fa8cc129f3.png) |
 |:--:|
@@ -126,7 +126,7 @@ python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MO
 
 Example:
 ```sh
-python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./tt_attn_R_50.pth
+python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
 ```
 
 #### Evaluation
