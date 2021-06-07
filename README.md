@@ -34,7 +34,7 @@ Details of the dataset construction, model architecture, and experimental result
 
 ### Dataset
 
-We introduce ✨ a new [VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing) dataset. 
+We introduce ✨ a new VinText dataset. 
 > ***By downloading this dataset, USER agrees:***
 > 
 > * to use this dataset for research or educational purposes only
