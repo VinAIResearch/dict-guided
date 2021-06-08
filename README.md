@@ -43,7 +43,7 @@ We introduce ✨ a new VinText dataset.
 
 |    Name  						  | #imgs | #text instances						   | Examples 									|
 |:-------------------------------:|:-----:|:-----------------------------------|:----------------------------------:|
-|[VinText](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing)| 2000  | About 56000 			   |![example.png](https://user-images.githubusercontent.com/32253603/120605880-c67afa80-c478-11eb-8a2a-039a1d316503.png)|
+|VinText| 2000  | About 56000 			   |![example.png](https://user-images.githubusercontent.com/32253603/120605880-c67afa80-c478-11eb-8a2a-039a1d316503.png)|
 
 Detail about ✨ VinText dataset can be found in [our paper](https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf).
 Download ***Converted dataset*** to try with our model
@@ -51,7 +51,7 @@ Download ***Converted dataset*** to try with our model
 |    Dataset variant  						  | Input format |  Link download 									|
 |:-------------------------------:|:-----:|:----------------------------------:|
 |Original| x1,y1,x2,y2,x3,y3,x4,y4,TRANSCRIPT  |[Download here](https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view?usp=sharing)|
-|Converted dataset| COCO format  |[Download here](https://drive.google.com/file/d/1AXl2iOTvLtMG8Lg2iU6qVta8VuWSXyns/view?usp=sharing)|
+|Converted dataset| [COCO format](https://cocodataset.org/#format-data)  |[Download here](https://drive.google.com/file/d/1AXl2iOTvLtMG8Lg2iU6qVta8VuWSXyns/view?usp=sharing)|
 ### VinText
 Extract data and copy folder to folder ```datasets/```
 
