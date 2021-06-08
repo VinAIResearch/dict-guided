@@ -138,7 +138,7 @@ python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_
 ```
 Example:
 ```sh
-python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
+python tools/train_net.py --eval-only --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./output/batext/vintext/trained_model.pth
 ```
 ### Acknowledgement
 This repository is built based-on [ABCNet](https://github.com/aim-uofa/AdelaiDet/blob/master/configs/BAText)
