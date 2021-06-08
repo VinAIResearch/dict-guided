@@ -126,7 +126,7 @@ python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MO
 
 Example:
 ```sh
-python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./trained_model.pth
+python tools/train_net.py --config-file configs/BAText/VinText/attn_R_50.yaml MODEL.WEIGHTS ./tt_attn_R_50.pth
 ```
 
 Trained model output will be saved in the ```output/batext/vintext/``` that is then used for evaluation
