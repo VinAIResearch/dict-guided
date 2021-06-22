@@ -20,7 +20,7 @@ groups = make_groups()
 
 TONES = ["", "ˋ", "ˊ", "﹒", "ˀ", "˜"]
 SOURCES = ["ă", "â", "Ă", "Â", "ê", "Ê", "ô", "ơ", "Ô", "Ơ", "ư", "Ư", "Đ", "đ"]
-TARGETS = ["aˇ", "aˆ", "Aˇ", "Aˆ", "eˆ", "Eˆ", "oˆ", "o˒", "Oˆ", "O˒", "u˒", "U˒", "D-", "d-"]
+TARGETS = ["aˇ", "aˆ", "Aˇ", "Aˆ", "eˆ", "Eˆ", "oˆ", "o˒", "Oˆ", "O˒", "u˒", "U˒", "D‑", "d‑"]
 
 
 def correct_tone_position(word):
@@ -348,7 +348,7 @@ class TextVisualizer(Visualizer):
             self.draw_text(
                 text,
                 text_pos,
-                color=lighter_color,
+                color='yellow',
                 horizontal_alignment=horiz_align,
                 font_size=font_size,
             )
