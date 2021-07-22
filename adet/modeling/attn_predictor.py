@@ -8,7 +8,8 @@ from editdistance import eval
 from torch import nn
 from torch.autograd import Variable
 from torch.nn import functional as F
-
+from dict_trie import Trie
+import time
 
 CTLABELS = [
     " ",
@@ -233,6 +234,8 @@ class ATTPredictor(nn.Module):
         self.dictionary = open("vn_dictionary.txt").read().replace("\n\n", "\n").split("\n")
         # self.dictionary.remove('')
         self.num_candidates = 1
+        self.trie = Trie(self.dictionary)
+
 
     def forward(self, rois, targets=None):
         rois = self.CRNN(rois)
@@ -279,6 +282,7 @@ class ATTPredictor(nn.Module):
             loss_total += nn.KLDivLoss(reduction="batchmean")(output, scores)
             return None, loss_total
         else:
+            start = time.time()
             n = rois.size()[1]
             decodes = torch.zeros((n, self.attention.max_len))
             prob = 1.0
@@ -294,6 +298,51 @@ class ATTPredictor(nn.Module):
                 prob *= probs[:, ni]
                 decodes[:, di] = decoder_input
                 decoder_raw[:, di, :] = decoder_output
+
+            # ori = time.time() - start
+            # print("original: ", str(ori))
+
+            # ### 1 candidate
+
+            # start = time.time()
+            # targets = decodes
+            
+            # decodes = []
+
+            # for target in targets:
+            #     rec = target.cpu().detach().numpy()
+            #     rec = decode(rec)
+
+            #     candidates_list = list(self.trie.all_levenshtein(rec, 1))
+            #     candidates_list = list(set(candidates_list))
+            #     if len(candidates_list) > 0:
+            #         rec = candidates_list[0]
+
+            #     # temp = ''
+            #     # dist = 1000
+            #     # for candidate in self.dictionary:
+            #     #     cur_dist = eval(rec, candidate)
+            #     #     if dist > cur_dist:
+            #     #         temp = candidate
+            #     #         dist = cur_dist
+            #     # if eval(rec, temp) < 2:
+            #     #     rec = temp
+
+            #     word = []
+            #     for char in rec:
+            #         word.append(CTLABELS.index(char))
+            #     while len(word) < 25:
+            #         word.append(105)
+            #     word = word[:25]
+            #     decodes.append(word)
+
+            # decodes = torch.Tensor(decodes).to(device="cuda")
+            # add = time.time() - start
+            # print("addition: ", str(add))
+            # print(add/ori)
+            # print('\n\n\n')
+
+            ### many candidate
 
             targets = decodes
             target_candidates = []
