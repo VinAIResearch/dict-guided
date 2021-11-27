@@ -91,7 +91,7 @@ python -m pip install detectron2==0.2 -f \
 ```sh
 git clone https://github.com/nguyennm1024/dict-guided.git
 cd dict-guided
-python setup.py install
+python setup.py build develop
 ```
 
 ##### Download vintext pre-trained model
